@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background: #0a8f2f;
+    color: white;
+    padding: 15px;
+}
+
+.hero {
+    padding: 20px;
+    background: white;
+}
+
+.hero img {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Driver Name Stylish */
+.driver-name {
+    font-size: 45px;
+    font-weight: bold;
+    color: #0a8f2f;
+    margin-top: 15px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    letter-spacing: 3px;
+}
+
+.driver-label {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Call Button */
+.call-btn {
+    background: #0a8f2f;
+}
+
+.call-btn:hover {
+    background: #066d22;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    background: #25D366;
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+}
+
+/* Floating WhatsApp Icon */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
