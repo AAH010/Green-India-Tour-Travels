@@ -80,3 +80,43 @@ header {
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+/* Footer */
+.footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Developer Credit */
+.developer {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.dev-name {
+    color: #25D366;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 16px;
+    text-shadow: 0 0 8px #25D366;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .driver-name {
+        font-size: 32px;
+    }
+
+    .hero img {
+        width: 95%;
+    }
+
+    .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
