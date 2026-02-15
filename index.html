@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Green India Tour & Travels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            color:white;
+            text-align:center;
+            background-size:cover;
+            background-position:center;
+            height:100vh;
+        }
+
+        .overlay{
+            background:rgba(0,0,0,0.6);
+            height:100vh;
+            padding-top:80px;
+        }
+
+        h1{
+            font-size:40px;
+        }
+
+        .info{
+            font-size:18px;
+            margin:10px 0;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:12px 25px;
+            margin:15px;
+            background:#25D366;
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+            border-radius:30px;
+        }
+
+        .btn:hover{
+            background:#1ebc57;
+        }
+
+        footer{
+            position:absolute;
+            bottom:10px;
+            width:100%;
+            font-size:14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <h1>🚗 Green India Tour & Travels</h1>
+
+    <div class="info">📞 7478771215</div>
+    <div class="info">📧 samtudes7868@gmail.com</div>
+    <div class="info">🕒 Open 24x7</div>
+    <div class="info">📍 Mathabhanga, Pramod Nagar, Ward No-01</div>
+
+    <a class="btn" href="https://wa.me/917478771215" target="_blank">
+        📲 Book on WhatsApp
+    </a>
+
+    <footer>
+        © 2026 Green India Tour & Travels | All Rights Reserved
+    </footer>
+
+</div>
+
+<script>
+    var images = [
+        "https://source.unsplash.com/1600x900/?car,travel",
+        "https://source.unsplash.com/1600x900/?roadtrip",
+        "https://source.unsplash.com/1600x900/?luxurycar",
+        "https://source.unsplash.com/1600x900/?highway"
+    ];
+
+    var randomImage = images[Math.floor(Math.random() * images.length)];
+    document.body.style.backgroundImage = "url('" + randomImage + "')";
+</script>
+
+</body>
+</html>
