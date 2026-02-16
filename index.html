@@ -8,8 +8,6 @@
 
     <meta name="description" content="Green India Tour & Travels offers premium Maruti Suzuki Ertiga car rental service in Mathabhanga. 24x7 service available. Book now via WhatsApp.">
 
-    <link rel="stylesheet" href="style.css">
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -80,10 +78,26 @@
         }
 
         footer {
-            background: #222;
-            color: white;
-            padding: 15px;
-            margin-top: 20px;
+            background:#111;
+            color:white;
+            padding:20px;
+            margin-top:20px;
+        }
+
+        .developer-credit {
+            margin-top:10px;
+            font-size:14px;
+            letter-spacing:2px;
+            font-weight:bold;
+        }
+
+        .developer-credit a {
+            color:#00ff99;
+            text-decoration:none;
+        }
+
+        .developer-credit a:hover {
+            text-decoration:underline;
         }
     </style>
 </head>
@@ -112,17 +126,12 @@
     </a>
 </section>
 
-<!-- ✅ PAYMENT QR SECTION -->
 <section class="payment">
     <h2>UPI Payment</h2>
-
-    <!-- Upload your QR image in images folder -->
     <img src="images/upi-qr.png" alt="UPI QR Code">
-
     <p><strong>UPI ID:</strong> 7478771215@axl</p>
 </section>
 
-<!-- ✅ BOOKING FORM -->
 <section class="booking">
     <h2>Online Booking Form</h2>
 
@@ -136,6 +145,13 @@
 
 <footer>
     <p>© 2026 Green India Tour & Travels | All Rights Reserved</p>
+
+    <p class="developer-credit">
+        🚀 DEVELOPED & DESIGNED BY 
+        <a href="https://aamin046.github.io/my-website/" target="_blank">
+            AAMIN
+        </a>
+    </p>
 </footer>
 
 <script>
@@ -144,6 +160,11 @@ function sendBooking() {
     var phone = document.getElementById("phone").value;
     var date = document.getElementById("date").value;
     var details = document.getElementById("details").value;
+
+    if(name === "" || phone === "" || date === "") {
+        alert("Please fill all required fields");
+        return;
+    }
 
     var message = "New Booking:%0AName: " + name +
                   "%0APhone: " + phone +
