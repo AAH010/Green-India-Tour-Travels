@@ -1,1 +1,1 @@
-console.log("Website Loaded Successfully!");
+console.log("Green India Tour & Travels Website Loaded Successfully");
