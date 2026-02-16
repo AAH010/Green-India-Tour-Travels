@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Body */
 body {
     font-family: Arial, sans-serif;
@@ -30,13 +34,14 @@ header {
     margin: 20px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
 .hero img {
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 500px;
     border-radius: 12px;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .hero img:hover {
@@ -100,6 +105,27 @@ header {
     transform: translateY(-3px);
 }
 
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.floating-whatsapp:hover {
+    background: #1ebe5d;
+    transform: scale(1.1);
+}
+
 /* Contact Section */
 .contact {
     background: white;
@@ -139,6 +165,18 @@ header {
     letter-spacing: 2px;
     font-size: 16px;
     text-shadow: 0 0 8px #25D366;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
