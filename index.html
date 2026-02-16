@@ -8,12 +8,86 @@
 
     <meta name="description" content="Green India Tour & Travels offers premium Maruti Suzuki Ertiga car rental service in Mathabhanga. 24x7 service available. Book now via WhatsApp.">
 
-    <meta name="keywords" content="Car Rental Mathabhanga, Maruti Suzuki Ertiga Booking, Taxi Service Mathabhanga">
-
-    <meta name="author" content="AAMIN">
-
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #0a7d3b;
+            color: white;
+            padding: 15px;
+        }
+
+        .hero img {
+            width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .driver-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0a7d3b;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .call-btn {
+            background: #007bff;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .payment, .booking {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .payment img {
+            width: 250px;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #0a7d3b;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
@@ -21,51 +95,66 @@
 </header>
 
 <section class="hero">
-    <!-- ✅ Correct Image Path -->
     <img src="images/photo.png" alt="Maruti Suzuki Ertiga">
 
     <h2 class="driver-name">SANTU DAS</h2>
-    <p class="driver-label">Professional Driver</p>
+    <p>Professional Driver</p>
 
     <h3>PREMIUM MARUTI SUZUKI ERTIGA CAR RENTAL</h3>
     <p>7 Seater AC MPV | ₹20-30 per KM | SAFE & COMFORTABLE RIDE</p>
 
-    <p class="open">🟢 ALWAYS OPEN – 24×7</p>
+    <p>🟢 ALWAYS OPEN – 24×7</p>
 
     <a href="tel:+917478771215" class="btn call-btn">📞 Call Now</a>
 
-    <a href="https://wa.me/917478771215?text=Hello%20I%20want%20to%20book%20Maruti%20Suzuki%20Ertiga"
-       target="_blank"
-       class="btn whatsapp-btn">
+    <a href="https://wa.me/917478771215" target="_blank" class="btn whatsapp-btn">
        💬 Book on WhatsApp
     </a>
 </section>
 
-<section class="contact">
-    <h2>Contact Information</h2>
+<!-- ✅ PAYMENT QR SECTION -->
+<section class="payment">
+    <h2>UPI Payment</h2>
 
-    <p><strong>📞 Phone:</strong> 7478771215</p>
+    <!-- Upload your QR image in images folder -->
+    <img src="images/upi-qr.png" alt="UPI QR Code">
 
-    <p><strong>📧 Email:</strong> 
-        <a href="mailto:santudas7868@gmail.com">santudas7868@gmail.com</a>
-    </p>
-
-    <p><strong>📍 Address:</strong><br>
-    MATHABHANGA, PROMOD NAGAR,<br>
-    WARD NO - 01 (ONE)
-    </p>
+    <p><strong>UPI ID:</strong> 7478771215@axl</p>
 </section>
 
-<footer class="footer">
-    <p>© 2026 Green India Tour & Travels | All Rights Reserved</p>
+<!-- ✅ BOOKING FORM -->
+<section class="booking">
+    <h2>Online Booking Form</h2>
 
-    <p class="developer">
-        Development & Design by 
-        <span class="dev-name">AAMIN</span>
-    </p>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Your Phone Number" required>
+    <input type="date" id="date" required>
+    <textarea id="details" placeholder="Pickup Location / Details"></textarea>
+
+    <button onclick="sendBooking()">Submit Booking</button>
+</section>
+
+<footer>
+    <p>© 2026 Green India Tour & Travels | All Rights Reserved</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+function sendBooking() {
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var date = document.getElementById("date").value;
+    var details = document.getElementById("details").value;
+
+    var message = "New Booking:%0AName: " + name +
+                  "%0APhone: " + phone +
+                  "%0ADate: " + date +
+                  "%0ADetails: " + details;
+
+    var whatsappURL = "https://wa.me/917478771215?text=" + message;
+
+    window.open(whatsappURL, '_blank');
+}
+</script>
 
 </body>
 </html>
